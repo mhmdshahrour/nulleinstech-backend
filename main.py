@@ -41,6 +41,11 @@ def send_email(message: EmailMessage) -> None:
 async def contact_options():
     return {}
 
+@app.options("/contact/")
+async def contact_options_slash():
+    return {}
+
+
 
 @app.post("/contact")
 async def contact(
