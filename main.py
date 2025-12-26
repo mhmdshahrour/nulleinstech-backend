@@ -36,6 +36,11 @@ def send_email(message: EmailMessage) -> None:
         server.login(SMTP_USER, SMTP_PASSWORD)
         server.send_message(message)
 
+        
+@app.options("/contact")
+async def contact_options():
+    return {}
+
 
 @app.post("/contact")
 async def contact(
