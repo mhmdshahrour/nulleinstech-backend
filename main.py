@@ -11,8 +11,11 @@ app = FastAPI(title="NullEinsTech Contact API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # lock later
-    allow_methods=["POST"],
+    allow_origins=[
+        "https://mhmdshahrour.github.io",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
